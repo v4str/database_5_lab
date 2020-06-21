@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавить ПТС
+{% endblock %}
+
+
+{% block body %}
+    <div class="col-md-6 col-md-offset-6 " >
+        <form method="post">
+        <h4 class="mb-3">Введите данные ПТС</h4>
+
+
+
+        <div class="col-md-6  mb-3">
+            <input type="text" name="series" id="series" class="form-control" value="{{ pts.series }}" placeholder="Серия" required="">
+            <div class="invalid-feedback">
+              Введите серию ПТС
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <input type="text" name="number" id="number" class="form-control"  value="{{ pts.number }}"   placeholder="Номер" required="">
+            <div class="invalid-feedback">
+              Введите номер ПТС
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <input type="text" name="issued_who" id="issued_who" class="form-control" value="{{ pts.issued_who }}" placeholder="Кем выдан" required="">
+            <div class="invalid-feedback">
+              Введите кем выдан ПТС
+            </div>
+        </div>
+        <div class="col-md-6  mb-3">
+            <input type="text" name="passport_code" id="passport_code" class="form-control" value="{{ pts.passport_code }}"  placeholder="Код паспорта" required="">
+            <div class="invalid-feedback">
+              Введите код паспорта
+            </div>
+        </div>
+        <div class="col-md-6  mb-3">
+            <input type="text" name="vin_number" id="vin_number" class="form-control" value="{{ pts.vin_number}}"  placeholder="VIN номер ТС" required="">
+            <div class="invalid-feedback">
+              Введите VIN номер
+            </div>
+        </div>
+
+
+
+
+
+        <div class="col-md-6 mb-3">
+            <input type="submit" class="btn btn-success" value="Добавить данные">
+
+        </div>
+
+
+    </form>
+    </div>
+
+
+
+
+
+
+{% endblock %}

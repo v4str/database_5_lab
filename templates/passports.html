@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Таблица Паспортные данные
+{% endblock %}
+
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>Паспортные данные</h1>
+        <table class="table table-bordered">
+
+            <tr>
+                <th>Серия</th>
+                <th>Номер</th>
+                <th>Кем выдан</th>
+                <th>Когда выдан</th>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Отчество</th>
+                <th>Место жительства</th>
+                <th colspan="2"> Действия </th>
+
+            </tr>
+            {% for el in show_passport_data %}
+                <tr>
+                    <td>{{ el.series }}</td>
+                    <td>{{ el.number }}</td>
+                    <td>{{ el.issued_who }}</td>
+                    <td>{{ el.issued_when }}</td>
+                    <td>{{ el.surname }}</td>
+                    <td>{{ el.name }}</td>
+                    <td>{{ el.patronymic }}</td>
+                    <td>{{ el.residence }}</td>
+                    <td><a href="/passports/{{ el.passport_code }}/update" class="btn btn-warning" type="button">Изменить</a></td>
+                    <td><a href="/passports/{{ el.passport_code }}/delete" class="btn btn-danger" type="button">Удалить</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <a href="/passports/add"  type="button" class="btn btn-primary btn-sm">Добавить запись в таблицу</a>
+
+
+    </div>
+
+
+
+{% endblock %}

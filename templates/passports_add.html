@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавить паспортные данные
+{% endblock %}
+
+
+{% block body %}
+    <div class="col-md-6 col-md-offset-6 " >
+        <form method="post">
+        <h4 class="mb-3">Введите паспортные данные</h4>
+
+
+
+        <div class="col-md-6  mb-3">
+            <input type="text" name="series" id="series" class="form-control"  placeholder="Серия паспорта" required="">
+            <div class="invalid-feedback">
+              Введите серию паспорта
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <input type="text" name="number" id="number" class="form-control"  placeholder="Номер паспорта" required="">
+            <div class="invalid-feedback">
+              Введите номер паспорта
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <input type="text" name="issued_who" id="issued_who" class="form-control"  placeholder="Кем выдан" required="">
+            <div class="invalid-feedback">
+              Введите кем выдан паспорт
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <input type="text" name="issued_when" id="issued_when" class="form-control"  placeholder="Когда выдан" required="">
+            <div class="invalid-feedback">
+              Введите когда выдан паспорт
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <input type="text" name="surname" id="surname" class="form-control"  placeholder="Фамилия" required="">
+            <div class="invalid-feedback">
+              Введите фамилию
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <input type="text" name="name" id="name" class="form-control"  placeholder="Имя" required="">
+            <div class="invalid-feedback">
+              Введите имя
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <input type="text"  name="patronymic" id="patronymic" class="form-control"  placeholder="Отчество" required="">
+            <div class="invalid-feedback">
+              Введите отчество
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <input type="text" name="residence" id="residence" class="form-control"  placeholder="Место жительства" required="">
+            <div class="invalid-feedback">
+              Введите место жительства
+            </div>
+        </div>
+
+
+        <div class="col-md-6 mb-3">
+            <input type="submit" class="btn btn-success" value="Добавить данные">
+
+        </div>
+
+
+    </form>
+    </div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+
+{% block body %}
+    <div class="container center-block">
+        <div class="col-md-3"></div>
+        <div class="list-group mb-6 col-6 col-md-offset-4">
+            <div class="center-block">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Доступные таблицы</span>
+                    <span class="badge badge-secondary badge-pill">7</span>
+                </h4>
+                <a href="passports" class="list-group-item list-group-item-action">Паспортные данные</a>
+                <a href="pts" class="list-group-item list-group-item-action">ПТС</a>
+                <a href="#" class="list-group-item list-group-item-action">СТС</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">Сведения о ТС</a>
+                <a href="#" class="list-group-item list-group-item-action">Тип ТС</a>
+                <a href="#" class="list-group-item list-group-item-action">Модель ТС</a>
+                <a href="#" class="list-group-item list-group-item-action">Временные удостоверения личности</a>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

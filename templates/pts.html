@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Таблица Паспортные данные
+{% endblock %}
+
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>ПТС</h1>
+        <table class="table table-bordered">
+
+            <tr>
+                <th>Серия</th>
+                <th>Номер</th>
+                <th>Кем выдан</th>
+                <th>Код паспорта</th>
+                <th>VIN номер ТС</th>
+                <th colspan="2"> Действия </th>
+            </tr>
+            {% for el in pts %}
+                <tr>
+                    <td>{{ el.series }}</td>
+                    <td>{{ el.number }}</td>
+                    <td>{{ el.issued_who }}</td>
+                    <td>{{ el.passport_code }}</td>
+                    <td>{{ el.vin_number }}</td>
+                    <td><a href="/pts/{{ el.pts_code }}/update" class="btn btn-warning" type="button">Изменить</a></td>
+                    <td><a href="/pts/{{ el.pts_code }}/delete" class="btn btn-danger" type="button">Удалить</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <a href="/pts/add"  type="button" class="btn btn-primary btn-sm">Добавить запись в таблицу</a>
+
+
+    </div>
+
+
+
+{% endblock %}
